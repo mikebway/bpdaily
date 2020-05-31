@@ -229,7 +229,7 @@ func combineRecordsForSameDay(records *[][]string) int {
 }
 
 // convertBPDateTimes converts the date-time values in the first field of each of
-// the given blood pressure records to a sortable YYYY-MM-DDThh:mm:ss form.
+// the given blood pressure records to a sortable YYYY-MM-DD hh:mm:ss form.
 //
 // If any record is found not to contain a date value, its first field will be set to "ZZZZ"
 // so that it can later be sorted to the end of the set and easily removed
@@ -244,11 +244,11 @@ func convertBPDateTimes(records *[][]string) {
 			// Convert the date time string in the first field to a time value
 			datetime, err := time.Parse("Jan 02 2006 15:04:05", record[0])
 
-			// If the first field was a valid date time, put it back in YYYY-MM-DDThh:mm:ss form
+			// If the first field was a valid date time, put it back in YYYY-MM-DD hh:mm:ss form
 			if err == nil {
 
 				// Convert the time value to our desired form and stuff it back in the record
-				(*records)[index][0] = datetime.Format("2006-01-02T15:04:05")
+				(*records)[index][0] = datetime.Format("2006-01-02 15:04:05")
 
 			} else {
 
