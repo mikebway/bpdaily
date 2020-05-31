@@ -13,7 +13,7 @@ Numbers, or Google Sheets: multiple points can be shown for the same day.
 ## Usage
 
 ```bash
-bputil <output-file.csv> <output-file-path.csv>
+bputil <intput-file.csv> <output-file-path.csv>
 ```
 
 ## Unit Testing
