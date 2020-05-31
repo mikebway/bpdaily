@@ -1,4 +1,4 @@
-# bpdaily - Organize Omron Blood Pressure CSV Files
+# bpdaily - Organize Omron Blood Pressure History for Charting
 
 `bpdaily` is a command line utility for processing Omron blood pressure reading history
 CSV files from one line per reading to one line per day of readings, concatenating
@@ -6,6 +6,9 @@ multiplre reads from the same day in time sequence order on one line.
 
 Additionally, the output file is sorted in ascending date order rather than having the
 most recent reading at the top as rendered by the Omron phone app's export function.
+
+Why do this? The consolidated daily CSV files are much easier to chart with Excel,
+Numbers, or Google Sheets: multiple points can be shown for the same day.
 
 ## Usage
 
