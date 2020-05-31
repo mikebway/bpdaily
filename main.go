@@ -51,7 +51,7 @@ func convertBloodPressureCSVToDaily(inputPath, outputPath string, overwrite bool
 	// If we are not allowed to overwrite the output file and it already exists
 	// then we should not waste any time processing the input data
 	_, err := os.Stat(outputPath)
-	if os.IsNotExist(err) {
+	if err != nil && !os.IsNotExist(err) {
 		return fmt.Errorf("output file already exists: %w", err)
 	}
 
