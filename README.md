@@ -18,7 +18,9 @@ bputil <intput-file.csv> <output-file-path.csv>
 
 ## Unit Testing
 
-Unit test coverage should be kept above 90% by line for all packages.
+Unit test coverage should be kept above 90% by line for all packages if at all
+possible. Sadly, that can't be done for the very short main package since the
+one `os.Exit(1)` line cannot be covered without terminating the test run.
 
 The unit tests are really more like integration tests in that they will invoke
 AWS API calls though successful calls are only achieved through mocking.
