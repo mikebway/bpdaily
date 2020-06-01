@@ -2,7 +2,7 @@
 
 `bpdaily` is a command line utility for processing Omron blood pressure reading history
 CSV files from one line per reading to one line per day of readings, concatenating
-multiplre reads from the same day in time sequence order on one line.
+multiple readings from the same day into time sequence order on one line.
 
 Additionally, the output file is sorted in ascending date order rather than having the
 most recent reading at the top as rendered by the Omron phone app's export function.
@@ -15,6 +15,29 @@ Numbers, or Google Sheets: multiple points can be shown for the same day.
 ```bash
 bputil <intput-file.csv> <output-file-path.csv>
 ```
+
+## Possible Enhancements for the Future
+
+There are so many but I am not likely to get around to them because the app does
+what I need from it and too few other people will be interested in a command line
+tool that only gets them half way to a pretty chart.
+
+* Support other blood pressure machine types other than Omron
+
+* Optionally: Allow time ranges to be defined (e.g. morning, afternoon, evening) and put
+readings into the right position according to their time stamp
+
+* Optionally: Discard multiple readings falling in the same time range.
+
+* Optionally: When discarding readings, flag whether to keep the highest or lowest.
+
+* Optionally: Allow the heart rate and notes columns to be excluded.
+
+* Optionally: Make the first column a simple date (no time portion) and exclude the other
+timestamps altogether.
+
+* Generalize the `bpdaily/dlycsv` package to support processing of any CSV file
+with timestmap columns and multiple records with the same date.
 
 ## Unit Testing
 
