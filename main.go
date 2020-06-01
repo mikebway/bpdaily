@@ -33,7 +33,12 @@ func main() {
 		executeError = dlycsv.ConvertBloodPressureCSVToDaily(os.Args[1], os.Args[2], false)
 
 	} else {
-		executeError = errors.New("ERROR: Please provide two arguments, an input file path and and output file path")
+		executeError = errors.New(`
+Usage: 
+
+  bpdaily input-file-path.csv output-file-path
+	
+`)
 	}
 
 	// Display any error that occured

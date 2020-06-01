@@ -38,7 +38,7 @@ func TestTooFewParameters(t *testing.T) {
 
 	// There should be an error reporting an invalid parameter count
 	require.NotNil(t, executeError, "should have failed for too few parameters")
-	require.Contains(t, executeError.Error(), "Please provide two arguments")
+	require.Contains(t, executeError.Error(), "bpdaily input-file-path.csv output-file-path")
 }
 
 // TestTooManyParameters checks that the program will object if more than two parameters
@@ -61,7 +61,7 @@ func TestTooManyParameters(t *testing.T) {
 
 	// There should be an error reporting an invalid parameter count
 	require.NotNil(t, executeError, "should have failed for too many parameters")
-	require.Contains(t, executeError.Error(), "Please provide two arguments")
+	require.Contains(t, executeError.Error(), "bpdaily input-file-path.csv output-file-path")
 }
 
 // TestMissingInputFile checks that the program will object if the input file
