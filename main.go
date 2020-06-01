@@ -41,7 +41,7 @@ Usage:
 `)
 	}
 
-	// Display any error that occured
+	// Display any error that occurred
 	if executeError != nil {
 		fmt.Printf("ERROR - %v\n", executeError.Error())
 

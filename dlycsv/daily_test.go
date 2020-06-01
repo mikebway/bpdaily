@@ -162,7 +162,7 @@ func TestConversionOfEmptyRecords(t *testing.T) {
 	var records = make([][]string, 2, 2)
 	convertBPDateTimes(&records)
 
-	// We should have two entries now with teh discard marker in their first (and only) field
+	// We should have two entries now with the discard marker in their first (and only) field
 	require.Equal(t, len(records), 2, "there should still be only two records")
 	require.Equal(t, len(records[0]), 1, "first record should have one field")
 	require.Equal(t, records[0][0], discardMarker, "first record should have a discard marker")
