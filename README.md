@@ -1,5 +1,7 @@
 # bpdaily - Organize Omron Blood Pressure History for Charting
 
+[![ISC License][isc-img]][isc] [![Go Report Card][go-report]][go-report-card] [![Test][test-action]][test-action-runs] [![Coverage Status][cov-img]][cov]
+
 `bpdaily` is a command line utility for processing Omron blood pressure reading history
 CSV files from one line per reading to one line per day of readings, concatenating
 multiple readings from the same day into time sequence order on one line.
@@ -73,3 +75,15 @@ go tool cover -func cover.out
 
 The `cover.out` file, and all files with the `.out` extention, are ignored by
 git thanks to an entry in the `.gitignore` file.
+
+[isc-img]: https://img.shields.io/badge/License-ISC-blue.svg
+[isc]: https://github.com/mikebway/bpdaily/blob/master/LICENSE
+
+[go-report]: https://goreportcard.com/badge/github.com/mikebway/bpdaily
+[go-report-card]: https://goreportcard.com/report/github.com/mikebway/bpdaily
+
+[test-action]: https://github.com/mikebway/bpdaily/workflows/Tests/badge.svg
+[test-action-runs]: https://github.com/mikebway/bpdaily/actions?query=workflow%3ATests
+
+[cov-img]: https://codecov.io/gh/mikebway/bpdaily/branch/master/graph/badge.svg
+[cov]: https://codecov.io/gh/mikebway/bpdaily
